@@ -137,7 +137,7 @@ public class Character implements RPGcharactor, Fight {
     //เริ่มการโจมตีฝ่ายตรงข้าม
     //Preconditions:ตัวละครทั้งสอง Hp ยังไม่หมดลง
     //Postconditions:คู่ต่อสู้ Hp ลดลงตามพลังโจมตี
-    //Side effect:แสดงผลว่าโจมตี
+    //Side effect:แสดงผลว่าโจมตีไปเท่าใด
     public void attack(Fight opponent) {
         System.out.println(this.name + " attacks " + opponent.getName() + "!");
         opponent.takeDamage(this.getAtk(this.level));
