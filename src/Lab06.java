@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lab05 {
+//จำลองการสร้างตัวละคร การเลเวลอัพ ติดตั้งอาวุธ รวมไปถึงการต่อสู้กันของตัวละคร
+public class Lab06 {
     public static void main(String[] args) {
         Character warrior = Character.createCharacter("ตัวตึง", "Warrior", 100, 100);
         Weapon sword = Weapon.createWeapon("ดาบโง่ๆ", "Warrior", 1000, 0, 0, 15);

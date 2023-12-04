@@ -1,3 +1,5 @@
+//เราจะสามารถกำหนด ชื่อ, hp, def, mana, speed ซึ่ง Accessory สามารถใส่กับอาชีพใดก็ได้
+//จะถูกคำนวณใน Character
 public class Accessoryy implements Accessory {
     private String name;
     private int hp;
@@ -7,7 +9,7 @@ public class Accessoryy implements Accessory {
 
     private Accessoryy(String name, int hp, int defUp, int maxManaUp, int speed) {
         this.name = name;
-        this.hp = Math.max(0, hp);  // Ensure non-negative values
+        this.hp = Math.max(0, hp);
         this.defUp = Math.max(0, defUp);
         this.maxManaUp = Math.max(0, maxManaUp);
         this.speed = Math.max(0, speed);
@@ -38,6 +40,7 @@ public class Accessoryy implements Accessory {
         return name;
     }
 
+    //ฟังก์ชั่นสร้างตัวละคร
     public static Accessoryy createAccessory(String name, int hp, int defUp, int maxManaUp, int speed) {
         return new Accessoryy(name, hp, defUp, maxManaUp, speed);
     }

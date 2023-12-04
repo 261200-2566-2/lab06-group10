@@ -1,3 +1,4 @@
+
 public interface Accessory {
     String getName();
     int getHp();
