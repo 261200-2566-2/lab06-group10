@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+//การสร้างตัวละครเราจะสามารถกำหนดค่าต่างๆตามต้องการ ซึ่งค่าสถานะต่างๆจะมีผลตามเลเวลและของที่สวมใส่
 public class Character implements RPGcharactor, Fight {
     private String name, job;
     private int level, hp, maxHp = 1000, atk, def, mana, maxMana = 100, runSpeed;
@@ -100,11 +101,11 @@ public class Character implements RPGcharactor, Fight {
 
     public String getName() {
         return name;
-    }
+    }//return ชื่อ
 
     public String getJob() {
         return job;
-    }
+    }//return อาชีพ
 
     public int getXp() {
         return xp;
@@ -130,6 +131,7 @@ public class Character implements RPGcharactor, Fight {
         levelUp();
     }
 
+    //ฟังก์ชั่นที่ใช้สร้างตัวละคร เราจะกำหนดสถานะเริ่มต้นให้ตัวละคร
     public static Character createCharacter(String name, String job, int atk, int def) {
         return new Character(name, job, atk, def);
     }

@@ -1,3 +1,6 @@
+//Equipment จะสามารถกำหนด ชื่อ, อาชีพที่ต้องการสวมใส่, atk, def, mana, ลดความเร็ว
+//อาชีพของอาวุธจะต้องตรงกันกับอาชีพของผู้ที่ต้องการจะสวมใส่เท่านั้น ถึงจะนับค่าสถานะ
+//จะถูกคำนวณใน Character
 public class Weapon implements Equipment {
     private String name;
     private String jobWeapon;
@@ -45,6 +48,7 @@ public class Weapon implements Equipment {
         return name;
     }
 
+    //ฟังก์ชั่นเพื่อสร้าง Equipment
     public static Weapon createWeapon(String name, String jobWeapon, int AtkUp, int DefUp, int Max_manaUp, int down_speed) {
         return new Weapon(name, jobWeapon, AtkUp, DefUp, Max_manaUp, down_speed);
     }
