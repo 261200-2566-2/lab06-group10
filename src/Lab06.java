@@ -4,20 +4,25 @@ import java.util.List;
 //จำลองการสร้างตัวละคร การเลเวลอัพ ติดตั้งอาวุธ รวมไปถึงการต่อสู้กันของตัวละคร
 public class Lab06 {
     public static void main(String[] args) {
+        //สร้างตัวละคร
         Character warrior = Character.createCharacter("ตัวตึง", "Warrior", 100, 100);
+        //สร้างอาวุธ
         Weapon sword = Weapon.createWeapon("ดาบโง่ๆ", "Warrior", 1000, 0, 0, 15);
         Weapon armor = Weapon.createWeapon("เกราะโนเกีย","Warrior",0,500,0,20);
+        //สร้างAccessory
         Accessoryy ring = Accessoryy.createAccessory("แหวน",500,50,100,30);
         warrior.levelUp();
+        //สร้างลิสสำหรับเก็บ Accessory และ Equipment
         List<Accessory> accessorieList = new ArrayList<>();
         List<Equipment> equipmentList = new ArrayList<>();
+        //add ของเข้าไปในลิส
         equipmentList.add(sword);
         equipmentList.add(armor);
         accessorieList.add(ring);
+        //ฟังก์ชั่นใส่ของ
         warrior.equipWeapon(equipmentList);
-        Character.Display(warrior);
         warrior.levelUp();
-        warrior.gainXp(300);
+        warrior.gainXp(300);//level up test
         warrior.levelUp();
         warrior.equipAccessory(accessorieList);
         System.out.println("LevelUp Test");
@@ -33,7 +38,8 @@ public class Lab06 {
         kiana.levelUp();
         kiana.equipWeapon(kianaEquipmentlist);
         Character.Display(kiana);
-        
+
+        //เช็คว่ามีชีวิตอยู่รุึปล่าว
         while (warrior.isAlive() && kiana.isAlive()) {
             warrior.attack(kiana);
             if (kiana.isAlive()) {
